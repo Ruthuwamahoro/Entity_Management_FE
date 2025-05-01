@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  body {
+    @apply bg-dark text-text-primary;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-opacity-50;
+  }
+  
+  .btn-primary {
+    @apply bg-accent text-white hover:bg-accent-hover focus:ring-accent;
+  }
+  
+  .btn-secondary {
+    @apply bg-dark-accent text-text-primary hover:bg-dark-hover focus:ring-dark-accent;
+  }
+  
+  .input {
+    @apply w-full px-4 py-2 bg-dark-secondary border border-dark-accent rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-text-primary;
+  }
+  
+  .card {
+    @apply bg-dark-secondary rounded-lg shadow-lg p-6;
+  }
+  
+  .sidebar-link {
+    @apply flex items-center px-4 py-3 rounded-md text-text-primary hover:bg-dark-hover transition-all duration-200;
+  }
+  
+  .sidebar-link.active {
+    @apply bg-accent text-white;
+  }
+  
+  .table-container {
+    @apply w-full overflow-x-auto;
+  }
+  
+  .table {
+    @apply min-w-full divide-y divide-dark-accent;
+  }
+  
+  .table-header {
+    @apply bg-dark-accent;
+  }
+  
+  .table-row {
+    @apply bg-dark-secondary hover:bg-dark-hover transition-all duration-200;
+  }
+  
+  .table-cell {
+    @apply px-6 py-4 whitespace-nowrap text-sm;
+  }
+  
+  .table-header-cell {
+    @apply px-6 py-3 text-left text-xs font-medium text-text-secondary uppercase tracking-wider;
+  }
+}
