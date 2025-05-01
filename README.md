@@ -31,8 +31,8 @@ Before running this project, make sure you have:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Ruthuwamahoro/entity-management-app.git
-cd entity-management-app
+git clone https://github.com/Ruthuwamahoro/Entity_Management_FE.git
+cd Entity_Management_FE
 ```
 
 2. Install dependencies:
