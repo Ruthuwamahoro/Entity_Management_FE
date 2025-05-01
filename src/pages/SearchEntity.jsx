@@ -26,7 +26,6 @@ export default function SearchEntity() {
           [queryParam]: searchValue
         }
       });
-      
       if (res.data && res.data.success) {
         if (res.data.data && res.data.data.length === 1) {
           setResult(res.data.data[0]);
