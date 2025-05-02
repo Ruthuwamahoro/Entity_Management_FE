@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { API_URL } from '../config/api';
 
 export default function ListEntities() {
   const [entities, setEntities] = useState([]);
@@ -53,7 +54,7 @@ export default function ListEntities() {
         params.phoneNumber = searchValue;
       }
 
-      const res = await axios.get('http://localhost:5079/api/entity/search', { params });
+      const res = await axios.get(`${API_URL}/entity/search`, { params });
       
       if (res.data && res.data.success) {
         setEntities(res.data.data || []);

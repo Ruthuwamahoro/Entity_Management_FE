@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { API_URL } from '../config/api';
+
 
 export default function AddEntity() {
   const [formData, setFormData] = useState({
@@ -25,7 +27,7 @@ export default function AddEntity() {
     setMessage({ type: '', text: '' });
     
     try {
-      await axios.post('http://localhost:5079/api/entity/add', formData);
+      await axios.post(`${API_URL}/entity/add`, formData);
       setMessage({ type: 'success', text: 'Entity added successfully!' });
       setFormData({
         Name: '',

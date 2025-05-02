@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { API_URL } from '../config/api';
 
 export default function SearchEntity() {
   const [searchValue, setSearchValue] = useState('');
@@ -21,7 +22,7 @@ export default function SearchEntity() {
     try {
       const queryParam = searchType === 'name' ? 'name' : 'phoneNumber';
       
-      const res = await axios.get(`http://localhost:5079/api/entity/search`, {
+      const res = await axios.get(`${API_URL}/entity/search`, {
         params: {
           [queryParam]: searchValue
         }

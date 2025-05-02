@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { API_URL } from '../config/api';
 
 export default function DeleteEntity() {
   const [identifier, setIdentifier] = useState('');
@@ -24,7 +25,7 @@ export default function DeleteEntity() {
         params.phoneNumber = identifier;  
       }
       
-      const response = await axios.delete('http://localhost:5079/api/entity/delete', { params });
+      const response = await axios.delete(`${API_URL}/entity/delete`, { params });
       
       if (response.data.success) {
         setMessage({ type: 'success', text: response.data.message || 'Record deleted successfully' });
